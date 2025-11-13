@@ -2,18 +2,18 @@
 # 11/12/25
 
 def main():
-    pokemon = input("Enter a starter pokemon from gen 1: ")
+    pokemon = str(input("Choose a starter pokemon from gens 1-4: "))
     type(pokemon)
 
 def type(name):
     match name:
-        case "Charmander":
-            print("Fire type pokemon")
-        case "Squirtle":
-            print("Water type pokemon")
-        case "Bulbasaur":
-            print("Grass type pokemon")
+        case "Charmander" | "Cyndaquil" | "Torchic" | "Chimchar" :
+            print("Congratulations! You have chosen " + name + ", the FIRE type pokemon")
+        case "Squirtle" | "Totodile" | "Mudkip" | "Piplup" :
+            print("Congratulations! You have chosen " + name + ", the WATER type pokemon")
+        case "Bulbasaur"| "Chikorita" | "Treecko" | "Turtwig" :
+            print("Congratulations! You have chosen " + name + ", the GRASS type pokemon")
         case _:
-            print("I don't recognize that type")
+            print("Hmm, the pokedex doesn't register that pokemon... a new species perhaps?")
 
-    main()
+main()
